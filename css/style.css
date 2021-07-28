@@ -1,0 +1,41 @@
+.custom-header {
+  background-color: #264653;
+}
+
+.login-button {
+  background-color: #e76f51;
+  color: white;
+  width: 91px;
+  height: 44px;
+  border-radius: 8px;
+  padding: 9px 25px;
+  border: none;
+}
+
+.custom-button {
+  background-color: #e76f51;
+  color: white;
+  width: 168px;
+  height: 44px;
+  border-radius: 8px;
+  padding: 9px 25px;
+  border: none;
+}
+.custom-text {
+  color: #e76f51;
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+.clients-section-color {
+  color: #83ccf6;
+}
+
+.fas {
+  color: #e77c40;
+  font-size: 20px;
+}
+.far {
+  font-size: 20px;
+}
