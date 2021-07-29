@@ -21,6 +21,15 @@
   padding: 9px 25px;
   border: none;
 }
+
+.custom-button2 {
+  color: #e76f51;
+  border: 1px solid #e76f51;
+  width: 168px;
+  height: 44px;
+  border-radius: 8px;
+  padding: 9px 25px;
+}
 .custom-text {
   color: #e76f51;
 }
@@ -38,4 +47,11 @@
 }
 .far {
   font-size: 20px;
+}
+
+li {
+  list-style: none;
+}
+footer {
+  margin: 0px;
 }
