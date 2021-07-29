@@ -19,6 +19,11 @@
       src="https://kit.fontawesome.com/ae3c40bb7e.js"
       crossorigin="anonymous"
     ></script>
+    <!-- css animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
   </head>
   <body>
     <!-- this is header section -->
@@ -160,8 +165,10 @@
     <!-- this is main section -->
     <main class="container">
       <!-- featured bikes -->
-      <section>
-        <h1 class="text-dark text-center pt-4 fw-bold">Fetured Bikes 2021</h1>
+      <section class="wow">
+        <h1 class="text-dark text-center pt-4 fw-bold wow slideInLeft">
+          Fetured Bikes 2021
+        </h1>
         <p class="text-center fs-6 custom-text">Best bike collection</p>
         <div class="row">
           <div class="col-md-4 col-lg-4 col-xl-4 col-xxl-4 p-5">
@@ -186,7 +193,9 @@
 
       <!-- latest news section -->
       <section class="px-4">
-        <h1 class="text-dark text-center pt-5 pb-2 fw-bold fs-1">
+        <h1
+          class="text-dark text-center pt-5 pb-2 fw-bold fs-1 wow slideInRight"
+        >
           Latest News
         </h1>
         <div class="row g-3 py-5">
@@ -231,7 +240,9 @@
 
       <!-- happy clients section -->
       <section class="px-4">
-        <h1 class="text-dark text-center pt-5 pb-2 fw-bold fs-1">
+        <h1
+          class="text-dark text-center pt-5 pb-2 fw-bold fs-1 wow slideInLeft"
+        >
           Happy
           <span class="custom-text">Clients Says</span>
         </h1>
@@ -292,7 +303,9 @@
 
       <!-- frequently asked questions section -->
       <section>
-        <h1 class="text-dark text-center pt-5 pb-2 fw-bold fs-1">
+        <h1
+          class="text-dark text-center pt-5 pb-2 fw-bold fs-1 wow slideInRight"
+        >
           Frequently Asked
           <span class="custom-text">Questions</span>
         </h1>
@@ -429,6 +442,96 @@
           </div>
         </div>
       </section>
+
+      <!-- ---------------------------------------------------bonus------------------------------------------------------->
+
+      <!-- new launch section -->
+      <section class="container text-center px-4s">
+        <h1 class="text-dark text-center pt-4 fw-bold wow slideInLeft">
+          Videos
+        </h1>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <iframe
+                class="w-100"
+                height="315"
+                src="https://www.youtube.com/embed/WJRL6YJMtOo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe
+                class="w-100"
+                height="315"
+                src="https://www.youtube.com/embed/MtBegnad5ec"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe
+                class="w-100"
+                height="315"
+                src="https://www.youtube.com/embed/qJU6wJSYaVo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
     </main>
 
     <!-- this is footer -->
@@ -468,5 +571,24 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+
+    <script>
+      var wow = new WOW({
+        boxClass: "wow", // animated element css class (default is wow)
+        animateClass: "animated", // animation css class (default is animated)
+        offset: 0, // distance to the element when triggering the animation (default is 0)
+        mobile: true, // trigger animations on mobile devices (default is true)
+        live: true, // act on asynchronously loaded content (default is true)
+        callback: function (box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null, // optional scroll container selector, otherwise use window,
+        resetAnimation: true, // reset animation on end (default is true)
+      });
+      wow.init();
+    </script>
   </body>
 </html>
